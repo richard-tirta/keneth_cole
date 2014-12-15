@@ -1,0 +1,108 @@
+
+//========= FOOTER ==========//
+
+
+footer {
+	background: rgb(39,39,39);
+	color: white;
+	height: 257px;
+	text-align: left;
+	@include medium {
+		height: auto;
+	}
+}
+
+.footer__container {
+	@include clearfix;
+	width: 960px;
+	margin: 0 auto;
+	@include medium {
+		width: 100%;
+	}
+	.footer-column {
+		float: left;
+		@include medium {
+			float: none;
+			@include margin-center;
+		}
+	}
+}
+
+.footer__column-left {
+	@include medium {
+		padding-top: 20px;
+	}
+	.logo-kenneth-cole {
+		margin-top: 20px;
+		@include medium {
+			@include margin-center;
+		}
+	}
+	.footer__nav {
+		margin: 32px 0 0 16px;
+		width: 150px;
+		@include medium {
+			@include margin-center;
+		}
+		a {
+			color: white;
+			display: block;
+			margin-top: 10px;
+		}
+	}
+}
+
+.footer__column-right {
+	@include clearfix;
+	margin: 35px 0 0 160px;
+	width: 611px;
+	@include medium {
+		width: 320px;
+	}
+	.footer__form {
+		float: left;
+		@include medium {
+			float: none;
+		}
+		p {
+			margin-left: 5px;
+		}
+		input {
+			display: inline-block;
+		}
+		.input-email {
+			width: 260px;
+			height: 48px;
+		}
+		.input-submit {
+			width: 48px;
+			height: 48px;
+		}
+	}
+	.footer__socials {
+		float: right;
+		margin-top: 30px;
+		@include medium {
+			float: none;
+			width: 150px;
+			@include margin-center;
+		}
+		.footer__social-icon {
+			float: left;
+			&:nth-child(2) {
+				border-right: 1px solid rgb(66,66,66);
+				border-left: 1px solid rgb(66,66,66);
+			}
+		}
+	}
+	.legal {
+		@include clearfix;
+		color: rgb(177,177,177);
+		float: none;
+		font-size: em(12);
+		margin-top: 150px;
+		a {
+			color: rgb(177,177,177);
+		}
+	}
+}

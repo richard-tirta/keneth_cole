@@ -1,0 +1,213 @@
+
+@mixin background-icon($imagePath){
+	background-image: image-url($imagePath);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: 100% 100%;
+	display: block;
+	overflow: hidden;
+	text-indent: -9999px;
+}
+
+
+.logo-look-good {
+	@include background-icon('logo_look_good.png');
+	width: 232px;
+	height: 42px;
+}
+
+.logo-kenneth-cole {
+	@include background-icon('logo_kenneth_cole.png');
+	width: 160px;
+	height: 35px;
+}
+
+.image-shoes {
+	@include background-icon('image_shoes.jpg');
+	width: 600px;
+	height: 278px;
+}
+
+.image-robert {
+	@include background-icon('image_robert.jpg');
+	width: 305px;
+	height: 345px;
+}
+
+.image-corn {
+	@include background-icon('image_corn.jpg');
+	width: 305px;
+	height: 345px;
+}
+
+.image-aids {
+	@include background-icon('image_aids.jpg');
+	width: 305px;
+	height: 345px;
+}
+
+.icon-submit {
+	@include background-icon('icon_submit.png');
+	width: 48px;
+	height: 48px;
+}
+
+@mixin social-white {
+	background-size: 30px 30px;
+	width: 80px;
+	height: 80px;
+}
+
+@mixin social-gray {
+	width: 48px;
+	height: 48px;
+}
+
+.icon-fb-white {
+	@include background-icon('icon_fb_white.png');
+	@include social-white;
+}
+
+.icon-tw-white {
+	@include background-icon('icon_tw_white.png');
+	@include social-white;
+}
+
+.icon-yt-white {
+	@include background-icon('icon_yt_white.png');
+	@include social-white;
+}
+
+.icon-fb-gray {
+	@include background-icon('icon_fb_gray.jpg');
+	@include social-gray;
+}
+
+.icon-tw-gray {
+	@include background-icon('icon_tw_gray.jpg');
+	@include social-gray;
+}
+
+.icon-yt-gray {
+	@include background-icon('icon_yt_gray.jpg');
+	@include social-gray;
+}
+
+
+@mixin background($imagePath){
+	background-image: image-url($imagePath);
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	display: block;
+	overflow: hidden;
+}
+
+@mixin hero-background {
+	background-size: 100%;
+	@media (max-width: 1400px) { 
+		background-size: 1400px 689px;
+	}
+}
+
+.image-hero {
+	@include background('image_hero.jpg');
+	@include hero-background;
+	transition: background-image 0.5s ease-in-out;
+	&:hover {
+		//@include background('image_hero_hover.jpg');
+		//@include hero-background;
+	}
+}
+
+@mixin sub-hero-background {
+	background-size: 100%;
+	@media (max-width: 1396px) { 
+		background-size: 698px 446px;
+	}
+}
+
+.section-sub-hero__moving {
+	@include background('image_moving.jpg');
+	@include sub-hero-background;
+	transition: background-image 0.5s ease-in-out;
+	&:hover {
+		@include background('image_moving_hover.jpg');
+		@include sub-hero-background;
+	}
+}
+
+.section-sub-hero__home {
+	@include background('image_home.jpg');
+	@include sub-hero-background;
+	transition: background-image 0.5s ease-in-out;
+	&:hover {
+		@include background('image_home_hover.jpg');
+		@include sub-hero-background;
+	}
+}
+
+.bg_circles {
+	background-color: white;
+	@include background('bg_circles.jpg');
+	background-size: 1400px 800px;
+}
+
+hr {
+	border: none;
+	background: rgb(154,169,187);
+	width: 100px;
+	height: 3px;
+}
+
+.callout {
+	border: 5px solid rgb(39,39,39);
+	display: inline-block;
+	font-family: "trade-gothic-bold", "Times New Roman", Times, serif;
+	font-size: em(18);
+	padding: 18px 12px 18px 12px;
+}
+
+.text-line {
+	display: inline-block;
+	position: relative;
+	&:before, &:after {
+		border-top: 1px solid rgb(162,162,162);
+		content: "";
+		position: absolute;
+		top: 8px;
+		width: 25px;
+		height: 1px;
+	}
+	&:before {
+		right: 100%;
+		margin-right: 15px;
+	}
+	&:after {
+		left: 100%;
+		margin-left: 15px;
+	}
+}
+
+input {
+	border: 0;
+	padding: 0;
+}
+
+
+@mixin placeholder {
+	color: rgb(184,184,184);
+	padding-left: 19px;
+}
+
+::placeholder {
+	@include placeholder;
+}
+::-webkit-input-placeholder {
+	@include placeholder;
+}
+::-moz-placeholder {
+	@include placeholder; 
+}
+:-ms-input-placeholder {  
+	@include placeholder; 
+}

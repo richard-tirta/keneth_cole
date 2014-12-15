@@ -1,0 +1,40 @@
+
+//========= MODULE BUY GIVE ==========//
+
+
+.section-buy-give {
+	@include clearfix;
+	width: 1036px;
+	margin: 0 auto;
+	padding-bottom: 126px;
+	@include medium {
+		width: 100%;
+	}
+	.image-shoes {
+		float: left;
+		margin-top: 154px;
+		@include medium {
+			float: none;
+			@include margin-center;
+		}
+	}
+	.buy-give__text {
+		float: left;
+		width: 355px;
+		margin-top: 136px;
+		@include medium {
+			float: none;
+			@include margin-center;
+		}
+	}
+
+	hr {
+		margin-top: 35px;
+	}
+	p {
+		margin-top: 30px;
+	}
+	.callout {
+		margin-top: 35px;
+	}
+}

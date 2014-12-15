@@ -1,0 +1,41 @@
+//========= HEADER ==========//
+
+
+header {
+	@include clearfix;
+	position: relative;
+	.logo-look-good {
+		float: left;
+		margin: 19px 0 0 24px;
+	}
+}
+
+.header__nav {
+	float: right;
+	@include clearfix;
+	
+}
+
+.nav__subnav {
+	float: left;
+	a {
+		float: left;
+	}
+	&.subnav-main {
+		margin-top: 32px;
+		a {
+			font-size: em(16);
+			margin: 0 15px;
+		}
+	}
+	&.subnav-socials {
+		width: 82px * 3;
+	}
+	.icon-fb-white {
+		border-right: 1px solid #ccc;
+		border-left: 1px solid #ccc;
+	}
+	.icon-tw-white {
+		border-right: 1px solid #ccc;
+	}
+}

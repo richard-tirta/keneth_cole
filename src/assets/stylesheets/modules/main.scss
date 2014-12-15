@@ -1,0 +1,45 @@
+//========= Media Query==========//
+
+@mixin medium {
+   @media (max-width: 1100px) { @content; }
+}
+
+@mixin small {
+   @media (max-width: 800px) { @content; }
+}
+
+@mixin margin-center {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+//========= BASE ==========//
+
+@mixin clearfix {
+	&:after {
+		content: "";
+		clear: both;
+		display: block;
+	}
+}
+
+html, body{
+	background: rgb(240,240,240);
+	color: rgb(39,39,39);
+	font-family: "trade-gothic-light", Verdana, sans-serif;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	min-width: 320px;
+	text-align: center;
+}
+
+section {
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+figure {
+	margin: 0;
+}
